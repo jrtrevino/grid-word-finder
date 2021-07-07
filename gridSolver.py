@@ -16,7 +16,7 @@ grid = [["r", "a", "e", "l"],
         ["n", "a", "t", "i"]]
 
 
-# generates and returns array containing potential moves for a letter at index (i, j) of grid.
+# generates and returns an array containing potential moves for a letter at index (i, j) of grid.
 def determine_available_moves(i, j):
     available_moves = []
     horizontal_indices = [i-1, i, i+1]
@@ -51,6 +51,7 @@ def generate_path(i, j, move_list):
     for next_move in next_moves:
         new_path = move_list.copy()
         if next_move not in new_path:
+            # we only want grid positions we haven't seen yet.
             new_path.append(next_move)
             generate_path(next_move[0], next_move[1], new_path)
 
