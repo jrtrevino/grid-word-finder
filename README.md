@@ -1,4 +1,4 @@
-# gridSolver
+# grid-word-finder
 
 A python3 program that computes words from a 4x4 grid of letters.
 
